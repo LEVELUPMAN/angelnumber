@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>エンジェルナンバー恋愛鑑定 ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0f0818;
+  --bg2:       #160d22;
+  --pink:      #e8829a;
+  --pink-l:    #f5b8c8;
+  --pink-pale: #fce8ef;
+  --gold:      #d4a84b;
+  --gold-l:    #f0cc7a;
+  --violet:    #9b6ec8;
+  --violet-l:  #c49ee0;
+  --text:      #f0e6f0;
+  --text-s:    rgba(240,230,240,0.7);
+  --text-xs:   rgba(240,230,240,0.45);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+  line-height:1.8;
+}
+
+/* ─── BG GLOW ─── */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 10%, rgba(155,110,200,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 80% 80%, rgba(232,130,154,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(212,168,75,0.05) 0%, transparent 70%);
+}
+
+/* ─── STARS ─── */
+.stars{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.stars::before,.stars::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 8%  12%, rgba(255,255,255,0.8) 0%,transparent 100%),
+    radial-gradient(1px 1px at 22% 38%, rgba(255,200,220,0.6) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 38% 6%, rgba(212,168,75,0.9) 0%,transparent 100%),
+    radial-gradient(1px 1px at 52% 62%, rgba(255,255,255,0.7) 0%,transparent 100%),
+    radial-gradient(1px 1px at 68% 18%, rgba(255,255,255,0.5) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 83% 42%, rgba(212,168,75,0.7) 0%,transparent 100%),
+    radial-gradient(1px 1px at 94% 72%, rgba(255,200,220,0.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 14% 78%, rgba(255,255,255,0.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 58% 88%, rgba(212,168,75,0.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 33% 52%, rgba(255,255,255,0.6) 0%,transparent 100%),
+    radial-gradient(2px 2px at 48% 28%, rgba(212,168,75,0.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 77% 55%, rgba(255,200,220,0.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 3%  44%, rgba(255,255,255,0.5) 0%,transparent 100%);
+  animation:twinkle 5s ease-in-out infinite alternate;
+}
+.stars::after{
+  background-image:
+    radial-gradient(1px 1px at 16% 24%, rgba(255,255,255,0.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 41% 70%, rgba(212,168,75,0.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 65% 11%, rgba(255,200,220,0.7) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 58%, rgba(255,255,255,0.8) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 28% 86%, rgba(212,168,75,0.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 73% 33%, rgba(255,255,255,0.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 96% 20%, rgba(255,200,220,0.5) 0%,transparent 100%);
+  animation-delay:2.5s;animation-duration:6s;
+}
+@keyframes twinkle{0%{opacity:.5;}100%{opacity:1;}}
+
+/* ─── LAYOUT ─── */
+.wrap{position:relative;z-index:1;}
+.container{max-width:720px;margin:0 auto;padding:0 20px;}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:80px 20px 60px;
+  position:relative;z-index:1;
+}
+.hero-moon{
+  font-size:3.5rem;margin-bottom:16px;
+  animation:moonFloat 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 20px rgba(212,168,75,0.5));
+}
+@keyframes moonFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.hero-em{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(0.75rem,2.5vw,0.9rem);
+  letter-spacing:.4em;color:var(--gold);opacity:.8;
+  margin-bottom:20px;font-style:italic;
+  animation:fadeUp 1s .2s both;
+}
+.hero-title{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(1.8rem,7vw,3rem);
+  font-weight:600;line-height:1.3;
+  margin-bottom:12px;
+  background:linear-gradient(135deg,var(--pink-pale),var(--gold-l),var(--violet-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:fadeUp 1s .4s both;
+  filter:drop-shadow(0 0 30px rgba(232,130,154,0.3));
+}
+.hero-sub{
+  font-size:clamp(0.9rem,3vw,1.05rem);
+  color:var(--text-s);margin-bottom:40px;
+  line-height:2;animation:fadeUp 1s .6s both;
+}
+.hero-orbs{
+  display:flex;gap:14px;justify-content:center;
+  margin-bottom:40px;animation:fadeUp 1s .8s both;
+}
+.orb{
+  padding:10px 18px;border-radius:40px;
+  border:1px solid rgba(212,168,75,.35);
+  background:rgba(212,168,75,.07);
+  font-family:'Playfair Display',serif;
+  font-size:.95rem;color:var(--gold-l);
+  animation:orbFloat 3s ease-in-out infinite;
+}
+.orb:nth-child(2){animation-delay:.6s;border-color:rgba(232,130,154,.35);background:rgba(232,130,154,.07);color:var(--pink-l);}
+.orb:nth-child(3){animation-delay:1.2s;}
+@keyframes orbFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+.hero-cta{animation:fadeUp 1s 1s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  font-size:.75rem;letter-spacing:.3em;color:var(--text-xs);
+  animation:fadeUp 1s 1.5s both,sDown 2s 2s ease-in-out infinite;
+}
+@keyframes sDown{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
+
+/* ─── BUTTONS ─── */
+.btn{
+  display:inline-block;
+  padding:16px 48px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:.95rem;
+  letter-spacing:.15em;
+  font-weight:500;
+  transition:all .35s;
+  cursor:pointer;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--pink),var(--violet));
+  color:#fff;border:none;
+  box-shadow:0 8px 30px rgba(232,130,154,.35);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(232,130,154,.5);}
+.btn-outline{
+  background:transparent;
+  border:1px solid rgba(212,168,75,.5);
+  color:var(--gold-l);
+}
+.btn-outline:hover{border-color:var(--gold);background:rgba(212,168,75,.08);transform:translateY(-2px);}
+
+/* ─── SECTION ─── */
+.sec{padding:80px 0;position:relative;z-index:1;}
+.sec-head{text-align:center;margin-bottom:48px;}
+.sec-eyebrow{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.8rem;letter-spacing:.45em;
+  color:var(--gold);opacity:.8;
+  display:block;margin-bottom:12px;
+}
+.sec-title{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(1.2rem,3.5vw,1.65rem);
+  font-weight:500;line-height:1.5;
+  color:var(--pink-pale);
+}
+.sec-title .emoji{display:block;font-size:1.8rem;margin-bottom:8px;}
+
+/* ─── DIVIDER ─── */
+.divider{
+  display:flex;align-items:center;gap:12px;
+  margin:52px 0;opacity:.35;
+}
+.divider::before,.divider::after{content:'';flex:1;height:1px;}
+.divider::before{background:linear-gradient(to right,transparent,var(--pink));}
+.divider::after{background:linear-gradient(to left,transparent,var(--pink));}
+.divider span{color:var(--pink);font-size:.8rem;}
+
+/* ─── INTRO SECTION ─── */
+.intro-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(232,130,154,.15);
+  border-radius:20px;padding:36px 32px;
+  margin-bottom:28px;
+  position:relative;overflow:hidden;
+}
+.intro-card::before{
+  content:'';position:absolute;top:0;right:0;
+  width:120px;height:120px;
+  background:radial-gradient(circle,rgba(232,130,154,.08),transparent 70%);
+}
+.intro-card p{
+  font-size:.95rem;color:var(--text-s);line-height:2;
+  margin-bottom:16px;
+}
+.intro-card p:last-child{margin-bottom:0;}
+.intro-card strong{color:var(--pink-l);font-weight:500;}
+
+.example-box{
+  background:rgba(212,168,75,.05);
+  border:1px solid rgba(212,168,75,.2);
+  border-radius:16px;padding:28px 28px;
+  margin:24px 0;
+}
+.example-box .ex-title{
+  font-size:.78rem;letter-spacing:.3em;
+  color:var(--gold);opacity:.8;
+  margin-bottom:16px;font-family:'Playfair Display',serif;font-style:italic;
+}
+.example-box ul{list-style:none;}
+.example-box li{
+  font-size:.9rem;color:var(--text-s);
+  padding:7px 0 7px 22px;position:relative;
+  border-bottom:1px solid rgba(212,168,75,.08);
+}
+.example-box li:last-child{border-bottom:none;}
+.example-box li::before{
+  content:'✦';position:absolute;left:0;top:9px;
+  color:var(--gold);font-size:.55rem;opacity:.7;
+}
+
+.twin-card{
+  background:linear-gradient(135deg,rgba(155,110,200,.08),rgba(232,130,154,.06));
+  border:1px solid rgba(155,110,200,.25);
+  border-radius:20px;padding:32px;margin-top:28px;
+}
+.twin-card .twin-label{
+  font-size:.75rem;letter-spacing:.35em;
+  color:var(--violet-l);opacity:.8;margin-bottom:12px;
+  font-family:'Playfair Display',serif;font-style:italic;
+}
+.twin-card h3{
+  font-family:'Shippori Mincho',serif;
+  font-size:1.05rem;color:var(--violet-l);
+  margin-bottom:14px;font-weight:500;
+}
+.twin-card p{font-size:.88rem;color:var(--text-s);line-height:2;}
+
+.reading-box{
+  background:rgba(232,130,154,.06);
+  border:1px solid rgba(232,130,154,.2);
+  border-radius:16px;padding:28px;margin-top:28px;
+}
+.reading-box .r-title{
+  font-size:.78rem;letter-spacing:.3em;color:var(--pink);
+  opacity:.8;margin-bottom:16px;
+  font-family:'Playfair Display',serif;font-style:italic;
+}
+.reading-box ul{list-style:none;}
+.reading-box li{
+  font-size:.9rem;color:var(--text-s);
+  padding:8px 0 8px 22px;position:relative;
+  border-bottom:1px solid rgba(232,130,154,.08);
+}
+.reading-box li:last-child{border-bottom:none;}
+.reading-box li::before{
+  content:'💖';position:absolute;left:0;top:8px;font-size:.7rem;
+}
+.reading-box .reading-close{
+  margin-top:16px;font-size:.9rem;
+  color:var(--pink-l);font-weight:400;
+}
+
+/* ─── FLOW ─── */
+.flow-bg{
+  background:linear-gradient(180deg,transparent,rgba(155,110,200,.05),transparent);
+  border-top:1px solid rgba(155,110,200,.1);
+  border-bottom:1px solid rgba(155,110,200,.1);
+}
+.flow-wrap{max-width:520px;margin:0 auto;}
+.flow-step{
+  display:flex;gap:20px;align-items:flex-start;
+  margin-bottom:32px;position:relative;
+}
+.flow-step:not(:last-child)::after{
+  content:'';position:absolute;
+  left:23px;top:52px;bottom:-32px;
+  width:1px;
+  background:linear-gradient(to bottom,rgba(155,110,200,.3),rgba(232,130,154,.2));
+}
+.flow-num{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(155,110,200,.2),rgba(232,130,154,.15));
+  border:1px solid rgba(155,110,200,.35);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;
+  font-size:1rem;color:var(--violet-l);
+  position:relative;z-index:1;
+}
+.flow-body{padding-top:6px;}
+.flow-title{font-size:.95rem;color:var(--pink-pale);margin-bottom:4px;font-weight:500;}
+.flow-desc{font-size:.85rem;color:var(--text-s);line-height:1.8;}
+
+.form-fields{
+  background:rgba(212,168,75,.04);
+  border:1px solid rgba(212,168,75,.15);
+  border-radius:16px;padding:24px 28px;
+  margin-top:36px;max-width:520px;margin-left:auto;margin-right:auto;
+}
+.form-fields .ff-title{
+  font-size:.78rem;letter-spacing:.3em;color:var(--gold);
+  opacity:.75;margin-bottom:16px;
+  font-family:'Playfair Display',serif;font-style:italic;
+}
+.form-fields ul{list-style:none;}
+.form-fields li{
+  font-size:.88rem;color:var(--text-s);
+  padding:7px 0 7px 22px;position:relative;
+  border-bottom:1px solid rgba(212,168,75,.08);
+}
+.form-fields li:last-child{border-bottom:none;}
+.form-fields li::before{content:'📝';position:absolute;left:0;top:7px;font-size:.7rem;}
+
+/* ─── PRICING ─── */
+.price-bg{
+  background:linear-gradient(180deg,transparent,rgba(212,168,75,.04),transparent);
+}
+.plans{
+  display:grid;gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  max-width:680px;margin:0 auto;
+}
+.plan{
+  border-radius:24px;padding:36px 28px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  transition:transform .35s,box-shadow .35s;
+}
+.plan:hover{transform:translateY(-6px);}
+.plan-1{
+  background:linear-gradient(160deg,rgba(232,130,154,.1),rgba(155,110,200,.08));
+  border:1px solid rgba(232,130,154,.3);
+}
+.plan-1:hover{box-shadow:0 20px 60px rgba(232,130,154,.2);}
+.plan-2{
+  background:linear-gradient(160deg,rgba(155,110,200,.12),rgba(212,168,75,.08));
+  border:1px solid rgba(155,110,200,.35);
+}
+.plan-2:hover{box-shadow:0 20px 60px rgba(155,110,200,.2);}
+.plan-3{
+  background:linear-gradient(160deg,rgba(212,168,75,.1),rgba(232,130,154,.08));
+  border:1px solid rgba(212,168,75,.35);
+}
+.plan-3:hover{box-shadow:0 20px 60px rgba(212,168,75,.2);}
+
+.plan::before{
+  content:'';position:absolute;top:-40px;right:-40px;
+  width:140px;height:140px;border-radius:50%;
+  opacity:.06;
+}
+.plan-1::before{background:var(--pink);}
+.plan-2::before{background:var(--violet);}
+.plan-3::before{background:var(--gold);}
+
+.plan-badge{
+  display:inline-block;
+  font-size:.7rem;letter-spacing:.3em;
+  padding:5px 16px;border-radius:20px;
+  margin-bottom:20px;font-family:'Playfair Display',serif;font-style:italic;
+}
+.plan-1 .plan-badge{background:rgba(232,130,154,.15);color:var(--pink-l);border:1px solid rgba(232,130,154,.25);}
+.plan-2 .plan-badge{background:rgba(155,110,200,.15);color:var(--violet-l);border:1px solid rgba(155,110,200,.25);}
+.plan-3 .plan-badge{background:rgba(212,168,75,.12);color:var(--gold-l);border:1px solid rgba(212,168,75,.25);}
+
+.plan-emoji{font-size:2.2rem;margin-bottom:12px;display:block;}
+.plan-name{
+  font-family:'Shippori Mincho',serif;
+  font-size:1.05rem;color:var(--text);
+  margin-bottom:6px;font-weight:500;
+}
+.plan-price{
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;font-weight:700;
+  margin-bottom:4px;line-height:1;
+}
+.plan-1 .plan-price{color:var(--pink-l);}
+.plan-2 .plan-price{color:var(--violet-l);}
+.plan-3 .plan-price{color:var(--gold-l);}
+.plan-price span{font-size:1rem;opacity:.7;}
+
+.plan-desc{
+  font-size:.82rem;color:var(--text-s);
+  margin:16px 0 20px;line-height:1.8;
+}
+.plan-feats{
+  list-style:none;text-align:left;
+  margin-bottom:28px;
+}
+.plan-feats li{
+  font-size:.84rem;color:var(--text-s);
+  padding:7px 0 7px 22px;position:relative;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.plan-feats li:last-child{border-bottom:none;}
+.plan-feats li::before{position:absolute;left:0;top:7px;font-size:.75rem;}
+.plan-1 .plan-feats li::before{content:'✨';}
+.plan-2 .plan-feats li::before{content:'🔮';}
+.plan-3 .plan-feats li::before{content:'🌟';}
+
+.plan-btn{
+  display:block;width:100%;padding:14px 20px;
+  border-radius:50px;font-size:.88rem;
+  letter-spacing:.12em;font-weight:500;
+  text-decoration:none;transition:all .3s;
+  cursor:pointer;border:none;
+}
+.plan-1 .plan-btn{background:linear-gradient(135deg,var(--pink),#b85c8a);color:#fff;box-shadow:0 6px 20px rgba(232,130,154,.3);}
+.plan-1 .plan-btn:hover{box-shadow:0 10px 30px rgba(232,130,154,.5);transform:translateY(-2px);}
+.plan-2 .plan-btn{background:linear-gradient(135deg,var(--violet),#6b4a9e);color:#fff;box-shadow:0 6px 20px rgba(155,110,200,.3);}
+.plan-2 .plan-btn:hover{box-shadow:0 10px 30px rgba(155,110,200,.5);transform:translateY(-2px);}
+.plan-3 .plan-btn{background:linear-gradient(135deg,var(--gold),#b8892a);color:#fff;box-shadow:0 6px 20px rgba(212,168,75,.3);}
+.plan-3 .plan-btn:hover{box-shadow:0 10px 30px rgba(212,168,75,.5);transform:translateY(-2px);}
+
+.plan-note{
+  font-size:.74rem;color:var(--text-xs);
+  margin-top:12px;line-height:1.7;
+}
+
+/* ─── FOOTER ─── */
+footer{
+  padding:52px 20px 36px;text-align:center;
+  position:relative;z-index:1;
+  border-top:1px solid rgba(232,130,154,.1);
+}
+.ft-emoji{font-size:2rem;margin-bottom:10px;display:block;}
+.ft-title{
+  font-family:'Shippori Mincho',serif;
+  font-size:1rem;color:var(--gold);
+  opacity:.6;letter-spacing:.2em;margin-bottom:10px;
+}
+.ft-note{font-size:.78rem;color:var(--text-xs);line-height:1.9;}
+
+/* ─── AN SHOWCASE ─── */
+.an-showcase{margin-top:40px;}
+.an-showcase-title{
+  font-size:.78rem;letter-spacing:.35em;color:var(--pink);
+  opacity:.8;margin-bottom:20px;text-align:center;
+  font-family:'Playfair Display',serif;font-style:italic;
+}
+.an-tabs{
+  display:flex;gap:8px;flex-wrap:wrap;
+  justify-content:center;margin-bottom:20px;
+}
+.an-tab{
+  padding:7px 18px;border-radius:20px;font-size:.78rem;
+  letter-spacing:.1em;cursor:pointer;border:1px solid;
+  transition:all .25s;background:transparent;
+  font-family:'Zen Kaku Gothic New',sans-serif;
+}
+.an-tab[data-range="0"]{border-color:rgba(212,168,75,.35);color:var(--gold-l);}
+.an-tab[data-range="1"]{border-color:rgba(232,130,154,.35);color:var(--pink-l);}
+.an-tab[data-range="2"]{border-color:rgba(155,110,200,.35);color:var(--violet-l);}
+.an-tab[data-range="3"]{border-color:rgba(212,168,75,.35);color:var(--gold-l);}
+.an-tab[data-range="4"]{border-color:rgba(232,130,154,.35);color:var(--pink-l);}
+.an-tab[data-range="5"]{border-color:rgba(155,110,200,.35);color:var(--violet-l);}
+.an-tab[data-range="6"]{border-color:rgba(212,168,75,.35);color:var(--gold-l);}
+.an-tab[data-range="7"]{border-color:rgba(232,130,154,.35);color:var(--pink-l);}
+.an-tab[data-range="8"]{border-color:rgba(155,110,200,.35);color:var(--violet-l);}
+.an-tab[data-range="9"]{border-color:rgba(212,168,75,.35);color:var(--gold-l);}
+.an-tab.active{background:rgba(255,255,255,.08);}
+.an-tab[data-range="0"].active,.an-tab[data-range="3"].active,.an-tab[data-range="6"].active,.an-tab[data-range="9"].active{background:rgba(212,168,75,.12);border-color:var(--gold);}
+.an-tab[data-range="1"].active,.an-tab[data-range="4"].active,.an-tab[data-range="7"].active{background:rgba(232,130,154,.12);border-color:var(--pink);}
+.an-tab[data-range="2"].active,.an-tab[data-range="5"].active,.an-tab[data-range="8"].active{background:rgba(155,110,200,.12);border-color:var(--violet);}
+
+.an-panel{display:none;}
+.an-panel.active{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;animation:panelIn .35s ease both;}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.an-chip{
+  border-radius:12px;padding:14px 10px;text-align:center;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
+  transition:all .3s;cursor:default;
+}
+.an-chip:hover{transform:translateY(-3px);background:rgba(255,255,255,.06);}
+.an-chip.gold{border-color:rgba(212,168,75,.2);}
+.an-chip.gold:hover{border-color:rgba(212,168,75,.4);box-shadow:0 6px 20px rgba(212,168,75,.1);}
+.an-chip.rose{border-color:rgba(232,130,154,.2);}
+.an-chip.rose:hover{border-color:rgba(232,130,154,.4);box-shadow:0 6px 20px rgba(232,130,154,.1);}
+.an-chip.violet{border-color:rgba(155,110,200,.2);}
+.an-chip.violet:hover{border-color:rgba(155,110,200,.4);box-shadow:0 6px 20px rgba(155,110,200,.1);}
+.an-chip-num{
+  font-family:'Playfair Display',serif;font-size:1.1rem;
+  margin-bottom:5px;display:block;
+}
+.an-chip.gold .an-chip-num{color:var(--gold-l);}
+.an-chip.rose .an-chip-num{color:var(--pink-l);}
+.an-chip.violet .an-chip-num{color:var(--violet-l);}
+.an-chip.zorome{
+  border-color:rgba(212,168,75,.5) !important;
+  background:rgba(212,168,75,.08) !important;
+  position:relative;
+}
+.an-chip.zorome::before{
+  content:'★';
+  position:absolute;top:5px;right:7px;
+  font-size:.55rem;color:var(--gold-l);opacity:.7;
+}
+.an-chip.zorome .an-chip-num{
+  font-size:1.25rem;
+  background:linear-gradient(135deg,var(--gold-l),var(--pink-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.an-chip.zorome .an-chip-kw{color:rgba(240,230,240,.75);}
+.an-chip-kw{font-size:.68rem;color:var(--text-xs);line-height:1.5;}
+
+/* ─── OMIKUJI ─── */
+.omikuji-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:28px;}
+.omikuji-result{
+  min-height:80px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(232,130,154,.18);
+  border-radius:20px;
+  padding:28px 28px;
+  margin-bottom:20px;
+  transition:all .4s;
+}
+.omikuji-placeholder{color:var(--text-xs);text-align:center;margin:12px 0;}
+.omikuji-num{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;font-weight:700;
+  background:linear-gradient(90deg,var(--pink-l),var(--gold-l),var(--violet-l));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin:8px 0 16px;display:block;text-align:center;
+  animation:fadeUp .5s ease both;
+}
+.omikuji-row{margin-bottom:12px;}
+.omikuji-row strong{font-size:.8rem;letter-spacing:.2em;color:var(--gold);opacity:.85;display:block;margin-bottom:4px;}
+.omikuji-row span{font-size:.9rem;color:var(--text-s);line-height:1.8;}
+.omikuji-sep{height:1px;background:linear-gradient(90deg,transparent,rgba(232,130,154,.25),transparent);margin:18px 0;}
+.omikuji-plan-label{font-size:.75rem;letter-spacing:.25em;color:var(--pink);opacity:.8;margin-bottom:8px;font-family:'Playfair Display',serif;font-style:italic;}
+.omikuji-plan-name{font-size:.95rem;color:var(--pink-pale);margin-bottom:4px;font-weight:500;}
+.omikuji-plan-note{font-size:.82rem;color:var(--text-s);}
+.omikuji-plan-btn{
+  display:inline-block;margin-top:14px;padding:12px 28px;
+  border-radius:50px;font-size:.85rem;letter-spacing:.12em;font-weight:500;
+  background:linear-gradient(135deg,var(--pink),var(--violet));
+  color:#fff;border:none;cursor:pointer;transition:all .3s;text-decoration:none;
+}
+.omikuji-plan-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,130,154,.4);}
+.omikuji-hint{
+  text-align:center;font-size:.82rem;color:var(--text-xs);
+  padding:16px;border:1px dashed rgba(212,168,75,.2);border-radius:12px;
+}
+
+/* ─── PLAN-4 (0円) ─── */
+.plan-4{
+  background:linear-gradient(160deg,rgba(34,200,160,.08),rgba(212,168,75,.06));
+  border:1px solid rgba(34,200,160,.28);
+}
+.plan-4:hover{box-shadow:0 20px 60px rgba(34,200,160,.15);}
+.plan-4::before{background:#22c8a0;}
+.plan-4 .plan-badge{background:rgba(34,200,160,.12);color:#7eeedd;border:1px solid rgba(34,200,160,.25);}
+.plan-4 .plan-price{color:#7eeedd;}
+.plan-4 .plan-feats li::before{content:'🎴';}
+.plan-4 .plan-btn{background:linear-gradient(135deg,#22c8a0,#1a9e80);color:#fff;box-shadow:0 6px 20px rgba(34,200,160,.3);}
+.plan-4 .plan-btn:hover{box-shadow:0 10px 30px rgba(34,200,160,.5);transform:translateY(-2px);}
+
+/* ─── SCROLL REVEAL ─── */
+.r{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.r.on{opacity:1;transform:translateY(0);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:600px){
+  .plans{grid-template-columns:1fr;}
+  .intro-card{padding:26px 20px;}
+  .plan{padding:28px 20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="wrap">
+
+<!-- ════ HERO ════ -->
+<header class="hero">
+  <div class="hero-moon">🌙</div>
+  <p class="hero-em">Angel Number Love Reading</p>
+  <h1 class="hero-title">✨ エンジェルナンバー<br>恋愛鑑定 ✨</h1>
+  <p class="hero-sub">🔮 気になる数字が示す恋愛メッセージを読み解きます 💖<br>あなたが感じた数字には、必ず意味があります</p>
+  <div class="hero-orbs">
+    <div class="orb">111</div>
+    <div class="orb">444</div>
+    <div class="orb">777</div>
+  </div>
+  <div class="hero-cta">
+    <a href="#plans" class="btn btn-primary">💖 鑑定を申し込む</a>
+    <a href="#omikuji" class="btn btn-outline" style="margin-left:12px;">🎴 無料おみくじ</a>
+  </div>
+  <p class="scroll-hint">↓ scroll</p>
+</header>
+
+<!-- ════ SERVICE ════ -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head r">
+      <span class="sec-eyebrow">Service</span>
+      <h2 class="sec-title">
+        <span class="emoji">🌙</span>
+        サービス内容
+      </h2>
+    </div>
+
+    <div class="intro-card r">
+      <p>最近・・・ 同じ数字を何度も目にしたり 👀✨<br>なぜか気になる数字はありませんか？</p>
+      <p>エンジェルナンバーは、111・222 などのゾロ目だけでなく<br>不規則に並ぶ数字や印象に残った数字<br><strong>すべてに意味があるとされています 💫</strong></p>
+    </div>
+
+    <div class="example-box r">
+      <p class="ex-title">たとえば、こんな数字も鑑定できます</p>
+      <ul>
+        <li>生年月日</li>
+        <li>今日の日付</li>
+        <li>何かが起きた日、強く印象に残った日</li>
+        <li>出会いや連絡、再会があった日</li>
+        <li>感情が大きく動いた瞬間に見た数字</li>
+      </ul>
+    </div>
+
+    <div class="intro-card r">
+      <p>こうした数字も、今のあなたの恋愛や心の状態と深くつながっています 💞<br>「なぜか気になった」という<strong>直感そのものが、大切なメッセージ</strong>です ✨</p>
+      <p>本サービスは<strong>エンジェルナンバーを用いた恋愛占い 🔮</strong><br>テキストチャット形式です 💌<br>通話やビデオは不要、文章のみで気軽にご相談いただけます</p>
+    </div>
+
+    <!-- AN SHOWCASE -->
+    <div class="an-showcase r">
+      <p class="an-showcase-title">✨ エンジェルナンバー 0000〜9999 ✨</p>
+      <div class="an-tabs">
+        <button class="an-tab active" data-range="0">0xxx</button>
+        <button class="an-tab" data-range="1">1xxx</button>
+        <button class="an-tab" data-range="2">2xxx</button>
+        <button class="an-tab" data-range="3">3xxx</button>
+        <button class="an-tab" data-range="4">4xxx</button>
+        <button class="an-tab" data-range="5">5xxx</button>
+        <button class="an-tab" data-range="6">6xxx</button>
+        <button class="an-tab" data-range="7">7xxx</button>
+        <button class="an-tab" data-range="8">8xxx</button>
+        <button class="an-tab" data-range="9">9xxx</button>
+      </div>
+      <div id="an-panels"></div>
+    </div>
+
+    <div class="twin-card r">
+      <p class="twin-label">Twin Ray</p>
+      <h3>🔥 ツインレイについて</h3>
+      <p>また、同じ数字を何度も繰り返し見る場合、<br>それは「ツインレイ」と呼ばれる魂の深い結びつきと関係していることがあります 🔥</p>
+      <br>
+      <p><strong style="color:var(--violet-l);">ツインレイとは・・・</strong><br>前世でひとつだった魂が二つに分かれて生まれた、この世にたった一人の魂の片割れを指すスピリチュアルな概念です ✨</p>
+      <br>
+      <p>強く惹かれ合う一方で、すれ違いや距離が生じる「サイレント期間（試練）」を伴うこともあり、魂の成長と気づきを促す関係だとされています 💫</p>
+    </div>
+
+    <div class="reading-box r">
+      <p class="r-title">本鑑定でお伝えすること</p>
+      <ul>
+        <li>その数字が恋愛に持つ意味</li>
+        <li>ツインレイに関するサインの可能性</li>
+        <li>今意識するとよい行動や心の持ち方</li>
+      </ul>
+      <p class="reading-close">前向きで分かりやすい言葉でお伝えします 💖</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span>💫</span></div></div>
+
+<!-- ════ FLOW ════ -->
+<section class="sec flow-bg">
+  <div class="container">
+    <div class="sec-head r">
+      <span class="sec-eyebrow">Flow</span>
+      <h2 class="sec-title">
+        <span class="emoji">🔁</span>
+        鑑定の流れ
+      </h2>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-step r">
+        <div class="flow-num">①</div>
+        <div class="flow-body">
+          <p class="flow-title">ご希望のコースをお申し込み 💎</p>
+          <p class="flow-desc">下記の料金プランからご希望のコースをお選びください。</p>
+        </div>
+      </div>
+      <div class="flow-step r">
+        <div class="flow-num">②</div>
+        <div class="flow-body">
+          <p class="flow-title">決済完了 💳</p>
+          <p class="flow-desc">お支払いが完了します。</p>
+        </div>
+      </div>
+      <div class="flow-step r">
+        <div class="flow-num">③</div>
+        <div class="flow-body">
+          <p class="flow-title">自動返信メールをお届け ✉</p>
+          <p class="flow-desc">ご登録のメールアドレスへ自動返信メールをお送りします。</p>
+        </div>
+      </div>
+      <div class="flow-step r">
+        <div class="flow-num">④</div>
+        <div class="flow-body">
+          <p class="flow-title">専用フォームより入力 📝</p>
+          <p class="flow-desc">メール内の専用フォームURLより必要事項をご入力ください。</p>
+        </div>
+      </div>
+      <div class="flow-step r">
+        <div class="flow-num">⑤</div>
+        <div class="flow-body">
+          <p class="flow-title">鑑定スタート 🔮</p>
+          <p class="flow-desc">フォーム送信確認後、鑑定を開始いたします。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-fields r">
+      <p class="ff-title">フォーム入力項目</p>
+      <ul>
+        <li>🔢 気になっている数字 3桁か4桁（ゾロ目以外でもOK）</li>
+        <li>⏰ その数字を見たタイミング（だいたいでOK）</li>
+        <li>💖 占いたい内容</li>
+        <li>🧾 決済名義</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span>💫</span></div></div>
+
+<!-- ════ OMIKUJI ════ -->
+<section class="sec" id="omikuji">
+  <div class="container">
+    <div class="sec-head r">
+      <span class="sec-eyebrow">Free Fortune</span>
+      <h2 class="sec-title">
+        <span class="emoji">🎴</span>
+        無料 エンジェルナンバーおみくじ
+      </h2>
+    </div>
+    <p class="sec-intro r" style="margin-bottom:28px;">今日の恋愛メッセージをさくっと受け取れます 💖</p>
+
+    <div class="omikuji-btns r">
+      <button class="btn btn-primary" id="btnDaily" type="button">今日の運勢を引く 🌙</button>
+      <button class="btn btn-outline" id="btnRandom" type="button">もう一回引く 🎲</button>
+    </div>
+
+    <div class="omikuji-result r" id="omikujiResult">
+      <p class="omikuji-placeholder">ボタンを押すと表示されます ✨</p>
+    </div>
+
+    <div class="omikuji-hint r">
+      気になる数字が出たら 料金プランで本格鑑定へ 💎
+    </div>
+  </div>
+</section>
+
+<!-- ════ PLANS ════ -->
+<section class="sec price-bg" id="plans">
+  <div class="container">
+    <div class="sec-head r">
+      <span class="sec-eyebrow">Pricing</span>
+      <h2 class="sec-title">
+        <span class="emoji">💎</span>
+        料金プラン
+      </h2>
+    </div>
+
+    <div class="plans">
+
+      <!-- PLAN 1 -->
+      <div class="plan plan-1 r">
+        <span class="plan-badge">Basic</span>
+        <span class="plan-emoji">🌟</span>
+        <p class="plan-name">恋愛鑑定メッセージ<br>＋質問1往復</p>
+        <p class="plan-price">1,111<span>円</span></p>
+        <p class="plan-desc">💌</p>
+        <ul class="plan-feats">
+          <li>恋愛鑑定メッセージをメールでお届け</li>
+          <li>質問1往復までメールで対応</li>
+        </ul>
+        <a href="#" class="plan-btn">1,111円で申し込む 💖</a>
+        <p class="plan-note">決済後、自動返信メールにて<br>専用フォームURLをご案内します</p>
+      </div>
+
+      <!-- PLAN 2 -->
+      <div class="plan plan-2 r">
+        <span class="plan-badge">Standard</span>
+        <span class="plan-emoji">💫</span>
+        <p class="plan-name">恋愛深掘り鑑定メッセージ<br>＋質問3往復</p>
+        <p class="plan-price">3,333<span>円</span></p>
+        <p class="plan-desc">💬</p>
+        <ul class="plan-feats">
+          <li>より詳しい深掘り鑑定メッセージをメールでお届け</li>
+          <li>質問3往復までメールで対応</li>
+        </ul>
+        <a href="#" class="plan-btn">3,333円で申し込む 💖</a>
+        <p class="plan-note">決済後、自動返信メールにて<br>専用フォームURLをご案内します</p>
+      </div>
+
+      <!-- PLAN 3 -->
+      <div class="plan plan-3 r">
+        <span class="plan-badge">Premium</span>
+        <span class="plan-emoji">🔥</span>
+        <p class="plan-name">恋愛相性＆運命解析メッセージ<br>＋質問10往復</p>
+        <p class="plan-price">5,555<span>円</span></p>
+        <p class="plan-desc">✨</p>
+        <ul class="plan-feats">
+          <li>お相手との相性をエンジェルナンバーから詳細解析</li>
+          <li>恋愛の運命的つながりや流れを読み解きます</li>
+          <li>質問10往復までメールで対応</li>
+        </ul>
+        <a href="#" class="plan-btn">5,555円で申し込む 💖</a>
+        <p class="plan-note">決済後、自動返信メールにて<br>専用フォームURLをご案内します</p>
+      </div>
+
+      <!-- PLAN 4 (FREE) -->
+      <div class="plan plan-4 r">
+        <span class="plan-badge">Free</span>
+        <span class="plan-emoji">🌙</span>
+        <p class="plan-name">ワンポイント恋愛鑑定メッセージ<br>質問不可</p>
+        <p class="plan-price">0<span>円</span></p>
+        <p class="plan-desc">✨</p>
+        <ul class="plan-feats">
+          <li>エンジェルナンバーの簡易解釈</li>
+          <li>恋愛メッセージ 約100〜150文字</li>
+          <li>有料プランの入口として気軽に体験</li>
+        </ul>
+        <a href="#" class="plan-btn">0円で申し込む 💖</a>
+        <p class="plan-note">決済後、自動返信メールにて<br>専用フォームURLをご案内します</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <span class="ft-emoji">🌙</span>
+  <p class="ft-title">Angel Number Love Reading</p>
+  <p class="ft-note">
+    気になる数字があなたに語りかけています ✨<br>
+    その声に、耳を傾けてみてください 💖<br><br>
+    占い結果は前向きなメッセージと行動のヒントをお伝えするものです。<br>最終的な判断はご自身でお願いいたします。
+  </p>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+// ── おみくじ ──
+const ANGEL_OMIKUJI = [
+  { n:"111",  meaning:"始まり",       msg:"新しい流れが近づいています\n素直さが鍵です",         act:"軽い一言を送る" },
+  { n:"222",  meaning:"信頼と調和",   msg:"焦らなくて大丈夫\n関係は整っています",              act:"不安より安心を選ぶ" },
+  { n:"333",  meaning:"後押しと成長", msg:"迷いは整理されます\n一歩進めてOK",                  act:"決めたら行動する" },
+  { n:"444",  meaning:"守護と安定",   msg:"大丈夫 守られています\n落ち着きが魅力になります",    act:"丁寧に返事をする" },
+  { n:"555",  meaning:"変化",         msg:"状況が動きます\n怖がらなくてOK",                    act:"流れに逆らわない" },
+  { n:"666",  meaning:"整える",       msg:"気持ちが揺れやすい日\n自分を優先してOK",             act:"休息を入れる" },
+  { n:"777",  meaning:"導き",         msg:"直感が当たりやすい日\n小さなサインを見逃さない",     act:"迷ったら心で決める" },
+  { n:"888",  meaning:"豊かさ",       msg:"愛が広がりやすい日\n受け取る準備が整います",         act:"感謝を伝える" },
+  { n:"999",  meaning:"区切りと解放", msg:"手放しのタイミング\n新しい恋の席が空きます",         act:"執着を一つ減らす" },
+  { n:"1111", meaning:"願いの加速",   msg:"想いが届きやすい日\n言葉が恋を進めます",             act:"短文で素直に伝える" },
+  { n:"2222", meaning:"関係の整列",   msg:"足並みが揃います\n急がず育ててOK",                  act:"相手のペースを尊重" },
+  { n:"3333", meaning:"魅力の開花",   msg:"自分らしさが武器\n堂々としてOK",                    act:"好きな服を選ぶ" },
+  { n:"4444", meaning:"強い守護",     msg:"安心して大丈夫\n静かに良い方向へ",                  act:"丁寧なやり取り" },
+  { n:"5555", meaning:"大転換",       msg:"恋のステージが変わる日\n決断が吉です",               act:"先延ばしをやめる" },
+  { n:"7777", meaning:"運命の一致",   msg:"偶然が増えやすい日\n縁の強さを感じます",             act:"直感の場所へ行く" },
+  { n:"8888", meaning:"愛の循環",     msg:"与えた愛が返ります\n受け取り上手が吉",               act:"褒め言葉を受け取る" },
+  { n:"9999", meaning:"卒業と再出発", msg:"終わりは始まり\n新しい関係が入ります",               act:"気持ちを整理する" },
+  { n:"1212", meaning:"バランス",     msg:"与える愛と受け取る愛\n整える時です",                 act:"相手の立場を想像" },
+  { n:"1221", meaning:"鏡の気づき",   msg:"相手はあなたの鏡\n本音に気づく日",                  act:"自分の願いを書く" },
+  { n:"1331", meaning:"再確認",       msg:"気持ちの軸が戻ります\n大切なものを選ぶ日",           act:"優先順位を決める" },
+  { n:"2112", meaning:"歩調合わせ",   msg:"距離感が整います\n押しすぎ注意",                    act:"一呼吸おく" },
+  { n:"2332", meaning:"関係の成長",   msg:"少しずつ前進\n育てる恋が吉",                        act:"小さな約束を守る" },
+  { n:"1010", meaning:"新章",         msg:"新しい章が始まります\n切り替えが吉",                 act:"新しい習慣を一つ" },
+  { n:"2020", meaning:"再調整",       msg:"ズレを直すタイミング\n言い方が大事",                 act:"短く優しく伝える" },
+  { n:"3030", meaning:"リズム",       msg:"テンポを取り戻せます\n会話が弾む日",                 act:"軽い話題でOK" },
+  { n:"707",  meaning:"再会の兆し",   msg:"戻る縁のサイン\n連絡の流れが出ます",                act:"返信は早めに" },
+  { n:"818",  meaning:"前進",         msg:"進むほど整います\n迷いは小さくなります",             act:"一歩だけ動く" },
+  { n:"1122", meaning:"縁結び",       msg:"ご縁が強まりやすい日\n関係が形になります",           act:"約束を作る" },
+  { n:"2525", meaning:"嬉しい変化",   msg:"嬉しい流れが来ます\n素直な反応が吉",                act:"喜びを言葉にする" },
+  { n:"717",  meaning:"好転",         msg:"状況が軽くなります\nタイミングが合います",           act:"提案してみる" },
+  { n:"1001", meaning:"再スタート",       msg:"一度終わった流れが再び動き出します\nやり直しはチャンスです",         act:"素直にもう一度向き合う" },
+  { n:"8118", meaning:"循環と拡大",       msg:"与えた愛が巡り戻ります\n受け取る準備をして",                      act:"感謝を言葉にする" },
+  { n:"8008", meaning:"無限の絆",         msg:"ご縁が切れないサイン\n形を変えて続いています",                    act:"安心して待つ" },
+  { n:"5005", meaning:"変化の中の安定",   msg:"揺れながらも軸は保たれています\n大きな成長の前触れ",              act:"流れに身を任せる" }
+];
+
+function planFor(n){
+  const premium = new Set(["555","5555","777","7777","707","1122","717","818","999","9999"]);
+  const basic   = new Set(["111","1111","1010","3030"]);
+  if(premium.has(n)) return { price:"5,555円", title:"恋愛相性＆運命解析メッセージ", note:"＋質問10往復" };
+  if(basic.has(n))   return { price:"1,111円", title:"恋愛鑑定メッセージ",           note:"＋質問1往復" };
+  return                    { price:"3,333円", title:"恋愛深掘り鑑定メッセージ",     note:"＋質問3往復" };
+}
+
+function getDailyIndex(){
+  const d = new Date();
+  const key = d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
+  return key % ANGEL_OMIKUJI.length;
+}
+function getRandomIndex(){ return Math.floor(Math.random()*ANGEL_OMIKUJI.length); }
+
+function scrollToPricing(){
+  const el = document.getElementById("plans");
+  if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function renderOmikuji(item){
+  const el = document.getElementById("omikujiResult");
+  const msgHtml = item.msg.replace(/\n/g,"<br>");
+  const plan = planFor(item.n);
+  el.innerHTML = `
+    <span class="omikuji-num">${item.n}</span>
+    <div class="omikuji-row"><strong>基本の意味</strong><span>${item.meaning}</span></div>
+    <div class="omikuji-row"><strong>今日の恋愛メッセージ</strong><span>${msgHtml}</span></div>
+    <div class="omikuji-row"><strong>ワンポイントアクション</strong><span>${item.act}</span></div>
+    <div class="omikuji-sep"></div>
+    <p class="omikuji-plan-label">おすすめプラン</p>
+    <p class="omikuji-plan-name">${plan.price} ${plan.title}</p>
+    <p class="omikuji-plan-note">${plan.note}</p>
+    <button class="omikuji-plan-btn" type="button" id="btnToPricing">料金プランを見る 💎</button>
+  `;
+  document.getElementById("btnToPricing").addEventListener("click", scrollToPricing);
+  el.style.borderColor = "rgba(232,130,154,.4)";
+}
+
+document.getElementById("btnDaily") .addEventListener("click", ()=>renderOmikuji(ANGEL_OMIKUJI[getDailyIndex()]));
+document.getElementById("btnRandom").addEventListener("click", ()=>renderOmikuji(ANGEL_OMIKUJI[getRandomIndex()]));
+
+// ── エンジェルナンバー 0000〜9999 データ生成 ──
+const anData = {
+  // 恋愛キーワードマップ（先頭2桁ベース）
+  keywords: {
+    '00':'無限の可能性・新たな出発',  '01':'直感・始まりの予感',
+    '02':'調和・二人の縁',            '03':'創造・愛の表現',
+    '04':'安定・守られた愛',          '05':'変化・恋の転機',
+    '06':'愛情・家庭・絆',            '07':'直感・神秘の縁',
+    '08':'豊かさ・愛の充実',          '09':'完成・魂の縁',
+    '10':'新たな一歩・勇気',          '11':'覚醒・運命の出会い',
+    '12':'パートナーシップ・調和',    '13':'変容・恋の深化',
+    '14':'基盤・誠実な愛',            '15':'自由・ときめき',
+    '16':'愛の奉仕・深い絆',          '17':'スピリチュアルな縁',
+    '18':'情熱・愛の結実',            '19':'魂の完成・縁の締め',
+    '20':'調和・優しさ',              '21':'新しい関係の始まり',
+    '22':'マスター・深い信頼',        '23':'コミュニケーション・喜び',
+    '24':'安心・守られる愛',          '25':'変化・新鮮な恋',
+    '26':'愛情・絆の深化',            '27':'内なる声・縁の導き',
+    '28':'豊かな愛・引き寄せ',        '29':'魂の縁・過去との再会',
+    '30':'創造・愛の始まり',          '31':'リーダーシップ・情熱',
+    '32':'調和・二人三脚',            '33':'マスター・表現の愛',
+    '34':'基盤・創造的な愛',          '35':'自由・ワクワクの恋',
+    '36':'愛の奉仕・表現',            '37':'直感・魂の探求',
+    '38':'豊かな表現・恋の開花',      '39':'完成・愛の昇華',
+    '40':'安定・天使の守護',          '41':'新出発・強固な基盤',
+    '42':'安定した関係・信頼',        '43':'創造・安定の愛',
+    '44':'天使・完全な守護',          '45':'変化・安定からの飛躍',
+    '46':'愛情・家庭の基盤',          '47':'直感・基盤の縁',
+    '48':'豊かさ・安定した幸せ',      '49':'完成・基盤の縁',
+    '50':'変化・新しい風',            '51':'勇気・変化の始まり',
+    '52':'調和・変化の波',            '53':'創造・変化の喜び',
+    '54':'基盤・変化の安定',          '55':'マスター・大変革の愛',
+    '56':'愛情・変化の絆',            '57':'直感・変化の縁',
+    '58':'豊かさ・変化の実り',        '59':'完成・変化の締め',
+    '60':'愛・奉仕の始まり',          '61':'新しい愛の形',
+    '62':'パートナー・愛の調和',      '63':'喜び・愛の表現',
+    '64':'安定・愛の基盤',            '65':'変化・愛の刷新',
+    '66':'マスター・純粋な愛',        '67':'直感・愛の導き',
+    '68':'豊かな愛・幸せの引き寄せ',  '69':'完成・愛の循環',
+    '70':'神秘・縁の導き',            '71':'新しい気づき・直感',
+    '72':'調和・魂の縁',              '73':'創造・神秘の表現',
+    '74':'基盤・直感の安定',          '75':'変化・神秘の転機',
+    '76':'愛・スピリチュアルな絆',    '77':'マスター・奇跡の縁',
+    '78':'豊かさ・直感の実り',        '79':'完成・魂の旅路',
+    '80':'豊かさ・情熱の始まり',      '81':'新しい豊かさ・愛',
+    '82':'調和・豊かな関係',          '83':'創造・情熱の表現',
+    '84':'安定・豊かな基盤',          '85':'変化・豊かさの転機',
+    '86':'愛情・豊かな絆',            '87':'直感・豊かな縁',
+    '88':'マスター・愛の充実',        '89':'完成・豊かさの縁',
+    '90':'完成・魂の始まり',          '91':'新たな魂の章',
+    '92':'調和・魂のパートナー',      '93':'創造・博愛の表現',
+    '94':'基盤・魂の安定',            '95':'変化・魂の転機',
+    '96':'愛情・魂の奉仕',            '97':'直感・魂の探求',
+    '98':'豊かさ・魂の実り',          '99':'マスター・魂の完成'
+  }
+};
+
+// ゾロ目専用キーワード
+const zoromeKw = {
+  '0000':'∞ すべての始まり・無限の可能性',
+  '1111':'覚醒・願いが現実になる瞬間',
+  '2222':'完全な調和・運命の絆',
+  '3333':'マスター・愛の創造と開花',
+  '4444':'天使の完全守護・揺るぎない安定',
+  '5555':'大転換・魂レベルの変容',
+  '6666':'純粋な愛・家庭と絆の完成',
+  '7777':'奇跡の縁・スピリチュアルな覚醒',
+  '8888':'愛の無限循環・豊かさの頂点',
+  '9999':'魂の完成・新たな章の幕開け'
+};
+
+const colorCycle = ['gold','rose','violet'];
+const panelsEl = document.getElementById('an-panels');
+
+// 10パネル（0xxx〜9xxx）を生成
+for(let d=0; d<10; d++){
+  const panel = document.createElement('div');
+  panel.className = 'an-panel' + (d===0?' active':'');
+  panel.id = 'panel-'+d;
+
+  // ── ゾロ目を先頭に追加 ──
+  const zoromeNum = String(d).repeat(4);
+  const zoromeChip = document.createElement('div');
+  zoromeChip.className = 'an-chip gold zorome';
+  zoromeChip.innerHTML = `<span class="an-chip-num">${zoromeNum}</span><span class="an-chip-kw">${zoromeKw[zoromeNum]}</span>`;
+  panel.appendChild(zoromeChip);
+
+  // 残り通常ナンバー（ゾロ目と重複する組み合わせは除外）
+  for(let i=0; i<=9; i++){
+    for(let j=0; j<=9; j++){
+      const prefix2 = String(d)+String(i);
+      const d4 = (d+i+j)%10;
+      const num = String(d)+String(i)+String(j)+String(d4);
+      // ゾロ目は除外（先頭に固定済み）
+      if(num === zoromeNum) continue;
+      const kw = anData.keywords[prefix2] || '数字の縁・メッセージ';
+      const col = colorCycle[(d+i+j)%3];
+      const chip = document.createElement('div');
+      chip.className = 'an-chip '+col;
+      chip.innerHTML = `<span class="an-chip-num">${num}</span><span class="an-chip-kw">${kw}</span>`;
+      panel.appendChild(chip);
+    }
+  }
+  panelsEl.appendChild(panel);
+}
+
+// タブ切り替え
+document.querySelectorAll('.an-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.an-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.an-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+tab.dataset.range).classList.add('active');
+  });
+});
+
+// ── スクロールリビール ──
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on'); });
+},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+
+// Stagger plan cards
+document.querySelectorAll('.plan').forEach((el,i)=>{
+  el.style.transitionDelay=(i*.12)+'s';
+});
+document.querySelectorAll('.flow-step').forEach((el,i)=>{
+  el.style.transitionDelay=(i*.1)+'s';
+});
+</script>
+</body>
+</html>
