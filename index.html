@@ -919,8 +919,8 @@ body{padding-bottom:80px;}
 
 <!-- ════ FIXED BOTTOM BAR ════ -->
 <div class="fixed-bar" id="fixedBar">
-  <a href="#plans" class="fb-btn fb-btn-primary">💖 鑑定を申し込む</a>
-  <a href="#omikuji" class="fb-btn fb-btn-secondary">🎴 無料おみくじ</a>
+  <button class="fb-btn fb-btn-primary" id="fbBtnApply">💖 鑑定を申し込む</button>
+  <button class="fb-btn fb-btn-secondary" id="fbBtnOmikuji">🎴 無料おみくじ</button>
 </div>
 
 </div><!-- /wrap -->
@@ -1001,6 +1001,14 @@ function renderOmikuji(item){
   `;
   document.getElementById("btnToPricing").addEventListener("click", scrollToPricing);
   el.style.borderColor = "rgba(232,130,154,.4)";
+
+  // 結果エリアへスクロール（固定バー80px分を考慮）
+  setTimeout(()=>{
+    const rect = el.getBoundingClientRect();
+    const offset = 80; // 固定バーの高さ
+    const top = window.pageYOffset + rect.top - offset - 12;
+    window.scrollTo({ top, behavior:'smooth' });
+  }, 80);
 }
 
 document.getElementById("btnDaily") .addEventListener("click", ()=>renderOmikuji(ANGEL_OMIKUJI[getDailyIndex()]));
@@ -1121,6 +1129,18 @@ document.querySelectorAll('.an-tab').forEach(tab=>{
     document.getElementById('panel-'+tab.dataset.range).classList.add('active');
   });
 });
+
+// ── ページ読み込み時に必ずトップへ ──
+if(history.scrollRestoration) history.scrollRestoration = 'manual';
+window.addEventListener('load', ()=>{ window.scrollTo(0,0); });
+
+// ── ページ読み込み時に必ずトップへ ──
+if(history.scrollRestoration) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
+// ── ページ読み込み時に必ずトップへ ──
+if(history.scrollRestoration) history.scrollRestoration = 'manual';
+window.addEventListener('load', ()=>{ window.scrollTo(0,0); });
 
 // ── 固定ボトムバー（ヒーロー通過後に出現）──
 const fixedBar = document.getElementById('fixedBar');
