@@ -630,6 +630,11 @@ body{padding-bottom:80px;}
 .r{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
 .r.on{opacity:1;transform:translateY(0);}
 
+/* スマホではリビールを無効化（要素が隠れたままになるのを防ぐ） */
+@media(max-width:600px){
+  .r{opacity:1;transform:none;transition:none;}
+}
+
 /* ─── RESPONSIVE ─── */
 @media(max-width:600px){
   .plans{grid-template-columns:1fr;}
@@ -751,7 +756,7 @@ body{padding-bottom:80px;}
     </div>
 
     <!-- AN SHOWCASE -->
-    <div class="an-showcase r">
+    <div class="an-showcase">
       <p class="an-showcase-title">✨ エンジェルナンバー 0000〜9999 ✨</p>
       <div class="an-tabs">
         <button class="an-tab active" data-range="0">0xxx</button>
