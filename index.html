@@ -976,8 +976,8 @@ body{padding-bottom:80px;}
 
 <!-- ════ FIXED BOTTOM BAR ════ -->
 <div class="fixed-bar" id="fixedBar">
-  <button class="fb-btn fb-btn-primary" id="fbBtnApply">💖 鑑定を申し込む</button>
-  <button class="fb-btn fb-btn-secondary" id="fbBtnOmikuji">🎴 無料おみくじ</button>
+  <a href="#plans" class="fb-btn fb-btn-primary" id="fbBtnApply">💖 鑑定を申し込む</a>
+  <a href="#omikuji" class="fb-btn fb-btn-secondary" id="fbBtnOmikuji">🎴 無料おみくじ</a>
 </div>
 
 </div><!-- /wrap -->
@@ -1193,13 +1193,9 @@ window.addEventListener('load', ()=>{ window.scrollTo(0,0); });
 
 // ── ページ読み込み時に必ずトップへ ──
 if(history.scrollRestoration) history.scrollRestoration = 'manual';
-window.scrollTo(0, 0);
-
-// ── ページ読み込み時に必ずトップへ ──
-if(history.scrollRestoration) history.scrollRestoration = 'manual';
 window.addEventListener('load', ()=>{ window.scrollTo(0,0); });
 
-// ── 固定ボトムバー（ヒーロー通過後に出現）──
+// ── 固定ボトムバー（ヒーローが少し隠れたらすぐ出現）──
 const fixedBar = document.getElementById('fixedBar');
 const heroEl   = document.querySelector('.hero');
 const ioBar = new IntersectionObserver(entries=>{
@@ -1207,8 +1203,21 @@ const ioBar = new IntersectionObserver(entries=>{
     if(!e.isIntersecting) fixedBar.classList.add('visible');
     else                  fixedBar.classList.remove('visible');
   });
-},{threshold:0.1});
+},{threshold:0.8}); // 80%見えなくなったら出現
 if(heroEl) ioBar.observe(heroEl);
+
+// ── 固定バーのアンカーリンクをスムーズスクロールで動かす ──
+document.querySelectorAll('.fb-btn').forEach(btn=>{
+  btn.addEventListener('click', e=>{
+    const href = btn.getAttribute('href');
+    if(!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    const target = document.getElementById(href.slice(1));
+    if(!target) return;
+    const top = window.pageYOffset + target.getBoundingClientRect().top - 12;
+    window.scrollTo({top, behavior:'smooth'});
+  });
+});
 
 // ── スクロールリビール ──
 const obs = new IntersectionObserver(entries=>{
